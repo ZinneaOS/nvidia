@@ -2,4 +2,4 @@ name: add-image-name
 type: shell
 commands:
   - bash /usr/share/steam/add-sid-i386.sh
-  - apt-get install -y -t sid libgl1-mesa-dri:i386 libc6:i386 libstdc++6:i386 zlib1g:i386 steam-launcher
+  - apt-get install -y -t sid libgl1-mesa-dri:i386 libc6:i386 libstdc++6:i386 zlib1g:i386 steam-installer
