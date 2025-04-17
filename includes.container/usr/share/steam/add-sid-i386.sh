@@ -16,3 +16,4 @@ EOF
 
 # Update the repo lists
 apt-get update
+apt-get dist-upgrade -y
