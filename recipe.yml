@@ -30,7 +30,7 @@ stages:
     - mv /etc/sid.sources /etc/apt/sources.list.d/
     - mv /etc/apt/sources.list.d/vanilla-base.sources /etc/
     - apt update
-    - apt upgrade
+    - apt upgrade -y
     - rm -f /usr/share/vanilla/kernel-version
     - echo "$(ls -1 /usr/lib/modules | tail -n 1)" > /usr/share/vanilla/kernel-version
 
