@@ -49,7 +49,7 @@ stages:
     includes:
       - modules/50-install-debs.yml # Sample local module present in this repository
       - gh:vanilla-os/dev-image:main:modules/00-basics.yml # Sample GitHub remote module in the format: `gh:your-name/your-repo:branch:modules/file.yml`
-      - module/55-install-steam.yml
+      - modules/55-install-steam.yml
 
   # Put your custom actions above this comment
 
