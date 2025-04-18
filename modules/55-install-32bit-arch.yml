@@ -1,0 +1,5 @@
+name: add-32bit-arch
+type: shell
+commands:
+  - dpkg --add-architecture i386
+  - apt update
