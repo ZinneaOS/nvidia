@@ -22,17 +22,6 @@ stages:
     - lpkg --unlock
     - apt-get update
 
-  # Put your custom actions below this comment
-
-  - name: add-sid-sources
-    type: shell
-    commands:
-    - mv /etc/sid.sources /etc/apt/sources.list.d/
-    - mv /etc/apt/sources.list.d/vanilla-base.sources /etc/
-    - apt update
-    - apt upgrade -y
-    - rm -f /usr/share/vanilla/kernel-version
-    - echo "$(ls -1 /usr/lib/modules | tail -n 1)" > /usr/share/vanilla/kernel-version
 
   - name: pseudo-miniupnp-downgrade #Downgrade patch for the sunshine runtime to work within the debian sid version VOS uses
     type: shell
@@ -51,6 +40,7 @@ stages:
       - gh:vanilla-os/dev-image:main:modules/00-basics.yml # Sample GitHub remote module in the format: `gh:your-name/your-repo:branch:modules/file.yml`
       - modules/55-install-32bit-arch.yml
       - modules/60-install-steam.yml
+      - modules/65-sid-sources-revert.yml
 
   # Put your custom actions above this comment
 

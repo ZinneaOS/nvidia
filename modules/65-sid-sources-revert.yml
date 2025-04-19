@@ -1,0 +1,6 @@
+name: add-32bit-arch
+type: shell
+commands:
+  - rm /etc/apt/sources.list.d/sid.sources
+  - mv /etc/vanilla-base.sources /etc/apt/sources.list.d/
+  - apt update
