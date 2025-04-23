@@ -28,19 +28,11 @@ stages:
     commands:
     - ln -s /usr/lib/x86_64-linux-gnu/libminiupnpc.so.18 /usr/lib/x86_64-linux-gnu/libminiupnpc.so.17
 
-  - name: example-commands # Sample module demonstrating the Shell module with custom commands
-    type: shell
-    commands:
-    - echo Example output
-
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
     includes:
       - modules/50-install-debs.yml # Sample local module present in this repository
       - gh:vanilla-os/dev-image:main:modules/00-basics.yml # Sample GitHub remote module in the format: `gh:your-name/your-repo:branch:modules/file.yml`
-      - modules/55-install-32bit-arch.yml
-      - modules/60-install-steam.yml
-      - modules/65-sid-sources-revert.yml
 
   # Put your custom actions above this comment
 

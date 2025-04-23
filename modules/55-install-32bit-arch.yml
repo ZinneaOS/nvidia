@@ -1,7 +1,0 @@
-name: add-32bit-arch
-type: shell
-commands:
-  - mv /etc/sid.sources /etc/apt/sources.list.d/
-  - mv /etc/apt/sources.list.d/vanilla-base.sources /etc/
-  - dpkg --add-architecture i386
-  - apt update
